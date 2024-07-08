@@ -11,7 +11,14 @@ public class Leitura {
         File arquivo = new File("C:/Users/User/OneDrive/Área de Trabalho/Programação/Aula22/pessoa.db");
         try {
             ObjectInputStream leitura = new ObjectInputStream(new FileInputStream(arquivo.getAbsoluteFile()));
-        } catch (FileNotFoundException e) {
+            Pessoa p = (Pessoa) leitura.readObject(); //volta como um objeto genérico
+            System.out.println(p);
+        }
+
+        catch (ClassNotFoundException e) {
+            System.out.println("Objeto não encontrado");
+        }
+        catch (FileNotFoundException e) {
             System.out.println("O arquivo nao existe");
         }
         catch (IOException e) {
