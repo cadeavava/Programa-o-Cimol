@@ -71,7 +71,7 @@ public class Principal {
                     default:
                         System.out.println("Opção inválida.");
                 }
-            } while (!opcao.equals("8"));
+            } while (!opcao.equals("11"));
         }
 
         private static void carregarContasDoArquivoPoupanca() {
